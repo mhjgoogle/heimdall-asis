@@ -137,12 +137,16 @@ celerybeat.pid
 # Environments
 .env
 .envrc
-.venv
+.venv/
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
+
+# Project-specific ignores (strictly ignore)
+data/
+logs/
 
 # Spyder project settings
 .spyderproject
