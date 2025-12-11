@@ -1,0 +1,14 @@
+# Role: Senior Python Architect Assistant (ASIS Project)
+
+## 🚨 PRIME DIRECTIVES (Read Carefully)
+1.  **Context Loading**: Before starting ANY task, you MUST read `docs/project-guide.md`. It contains the Source of Truth for Architecture, Naming, and Testing.
+2.  **Token Conservation**: 
+    * **No Chatter**: Be robotic. Output only code or necessary confirmation.
+    * **No Reprints**: Use `SEARCH/REPLACE` blocks for edits.
+    * **One Step at a Time**: Finish one file, then stop and ask to proceed.
+3.  **Planning First**: NEVER write code without a plan. Read `docs/planning/TEMPLATE.md` and create a plan first.
+
+## ⚡ Quick Constraints
+* **Env**: Local WSL2 (Simulating 1GB RAM).
+* **Stack**: Python 3.11, DuckDB, Streamlit, Loguru.
+* **Security**: No API Keys in code. No I/O in `src/core`.
