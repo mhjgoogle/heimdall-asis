@@ -1,0 +1,76 @@
+sources:
+
+  # -------------------
+  # 🇯🇵 Japan News Sites
+  # -------------------
+  asia.nikkei.com:
+    enabled: true
+    lang: en
+    parser: newspaper     # 标准英文新闻，支持自动解析
+
+  japantimes.co.jp:
+    enabled: true
+    lang: en
+    parser: newspaper     # 支持全文，结构标准
+
+  nhk.or.jp:
+    enabled: true
+    lang: ja
+    parser: custom        # 日文新闻，需自定义解析器
+    content_selector: "div#main-content"
+
+  english.kyodonews.net:
+    enabled: true
+    lang: en
+    parser: newspaper
+
+  japantoday.com:
+    enabled: true
+    lang: en
+    parser: newspaper
+
+  mainichi.jp:
+    enabled: false        # 当前不启用
+
+  yomiuri.co.jp:
+    enabled: false
+
+  # -------------------
+  # 🇺🇸 U.S. Market News
+  # -------------------
+  finance.yahoo.com:
+    enabled: true
+    lang: en
+    parser: newspaper
+
+  cnbc.com:
+    enabled: true
+    lang: en
+    parser: newspaper
+
+  marketwatch.com:
+    enabled: true
+    lang: en
+    parser: newspaper
+
+  investing.com:
+    enabled: true
+    lang: en
+    parser: newspaper
+
+  reuters.com:
+    enabled: true
+    lang: en
+    parser: newspaper
+
+  bloomberg.com:
+    enabled: false       # ❌ 付费墙，抓取困难，暂不启用
+
+  ft.com:
+    enabled: false       # ❌ 付费墙
+
+  wsj.com:
+    enabled: false       # ❌ 付费墙
+
+  economist.com:
+    enabled: false       # ❌ 付费墙

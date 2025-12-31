@@ -1,19 +1,46 @@
 [tool.poetry]
 name = "heimdall-asis"
 version = "0.1.0"
-description = "Automated Strategic Intelligence System"
-authors = ["Your Name <your.email@example.com>"]
+description = "ASIS: Automated Strategic Intelligence System"
+authors = ["dev <dev@example.com>"]
+package-mode = false
 
 [tool.poetry.dependencies]
-python = "^3.10"
-duckdb = "^0.9.0"
-google-generativeai = "^0.3.0"
-streamlit = "^1.28.0"
-pandas = "^2.0.0"
-dask = "^2023.0.0"
+python = "^3.11"
+pandas = "^2.0"
+dask = {extras = ["dataframe"], version = "^2023.2"}
+duckdb = ">=1.4.3"
+requests = "^2.28"
+loguru = "^0.7"
+streamlit = "^1.20"
+plotly = "^5.0"
+yfinance = "^0.2.0"
+pydantic = "^2.12.5"
+jupyter = "^1.1.1"
+matplotlib = "^3.10.8"
+seaborn = "^0.13.2"
+python-dotenv = "^1.2.1"
+trafilatura = "^1.8"
+feedparser = "^6.0"
+pyyaml = "^6.0"
+selenium = "^4.39.0"
+webdriver-manager = "^4.0.2"
+beautifulsoup4 = "^4.14.3"
+mplfinance = "^0.12.0"
+schedule = "^1.2.2"
 
-[tool.poetry.dev-dependencies]
-pytest = "^7.4.0"
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0"
+ipykernel = "^7.1.0"
+
+[tool.poetry.scripts]
+asis = "local.main:main"
+init-sqlite = "local.src.utils.init_sqlite:main"
+migrate-data-catalog = "local.src.utils.migrate_data_catalog:main"
+migrate-data-catalog-v2 = "local.src.utils.migrate_data_catalog_v2:main"
+drop-data-catalog = "local.src.utils.drop_data_catalog:main"
+create-data-catalog = "local.src.utils.create_data_catalog:main"
+seed-data-catalog = "local.src.utils.seed_data_catalog:main"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
